@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme tokens as RGB channels so Tailwind opacity modifiers keep working. Dark is the default. */
+:root {
+  color-scheme: dark;
+  --c-base: 21 23 28;
+  --c-surface: 28 31 38;
+  --c-line: 44 49 59;
+  --c-fg: 232 234 238;
+  --c-muted: 154 161 174;
+  --c-accent: 141 164 217;
+}
+html[data-theme='light'] {
+  color-scheme: light;
+  --c-base: 246 247 249;
+  --c-surface: 255 255 255;
+  --c-line: 217 221 228;
+  --c-fg: 27 30 36;
+  --c-muted: 90 98 112;
+  --c-accent: 63 90 166;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { @apply bg-base font-sans text-fg antialiased; }
+:focus-visible { outline: 2px solid theme('colors.accent'); outline-offset: 3px; }
+
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.hero-in { animation: rise 0.7s ease-out both; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
