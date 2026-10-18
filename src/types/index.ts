@@ -23,6 +23,8 @@ export interface Project {
   screenshotAlt?: string
   /** Leave empty to hide the button. */
   gallery?: Screenshot[]
+  /** Optional note shown above the gallery on the screenshots page. */
+  galleryNote?: string
   githubUrl?: string
   liveUrl?: string
 }

@@ -27,6 +27,7 @@ export default function GalleryPage({ projectId }: { projectId: string }) {
         {project && project.gallery ? (
           <>
             <h1 className="font-display text-4xl md:text-5xl">{project.name}</h1>
+            {project.galleryNote && <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted">{project.galleryNote}</p>}
             <div className="mt-10">
               <ProjectGallery screenshots={project.gallery} standalone />
             </div>
