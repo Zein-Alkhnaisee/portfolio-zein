@@ -202,7 +202,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/Zein-Alkhnaisee/nova-market',
     liveUrl: 'https://nova-market11.netlify.app',
     galleryNote:
-      'NOVA Market is a frontend-only demo: product data, accounts, payments and the shopping assistant are simulated in the browser. These screenshots were captured from the app running locally. Neutral placeholders stand in for the product photos, which normally load from an external image host.',
+      'NOVA Market is a frontend-only demo: product data, accounts, payments and the shopping assistant are simulated in the browser. These screenshots were captured from the app running locally.',
     gallery: [
       { src: "/images/projects/nova-shop.webp", title: "Shop", caption: "Product listing with category navigation, filters and sorting, and wishlist, compare and add-to-cart actions on each product.", group: "Storefront", width: 1440, height: 900 },
       { src: "/images/projects/nova-product.webp", title: "Product page", caption: "Product detail with price, rating, stock status, an image gallery and the Build your own configurator.", group: "Storefront", width: 1440, height: 900 },
